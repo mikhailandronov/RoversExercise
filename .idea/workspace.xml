@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6dfad347-2457-4600-ae58-cf0db3c86857" name="Changes" comment="Interfaces, implementation, tests for UCs:&#10;- Make one step forward">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/common/Interfaces.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/common/Interfaces.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/exploration/Rovers.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/exploration/Rovers.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/ma/rovers/tests/RoversTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/ma/rovers/tests/RoversTests.kt" afterDir="false" />
-    </list>
+    <list default="true" id="6dfad347-2457-4600-ae58-cf0db3c86857" name="Changes" comment="Interfaces, implementation, tests for UCs:&#10;- Execute exploration program" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -250,7 +245,7 @@
       <updated>1693230693145</updated>
       <workItem from="1693230693884" duration="7595000" />
       <workItem from="1693334004409" duration="5781000" />
-      <workItem from="1693490437715" duration="39315000" />
+      <workItem from="1693490437715" duration="40587000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit: interfaces, implementation, tests for UCs:&#10;- Describe field&#10;- Place rover on the field and remove it&#10;- Set and get camera direction">
       <created>1693633674284</created>
@@ -273,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693646301467</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Interfaces, implementation, tests for UCs:&#10;- Execute exploration program">
+      <created>1693656505972</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1693656505972</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +285,7 @@
     <MESSAGE value="Initial commit: interfaces, implementation, tests for UCs:&#10;- Describe field&#10;- Place rover on the field and remove it&#10;- Set and get camera direction" />
     <MESSAGE value="Interfaces, implementation, tests for UCs:&#10;- Turn rover right or left&#10;- Get rover location on the field&#10;&#10;Changed cell coordinates to Point type" />
     <MESSAGE value="Interfaces, implementation, tests for UCs:&#10;- Make one step forward" />
-    <option name="LAST_COMMIT_MESSAGE" value="Interfaces, implementation, tests for UCs:&#10;- Make one step forward" />
+    <MESSAGE value="Interfaces, implementation, tests for UCs:&#10;- Execute exploration program" />
+    <option name="LAST_COMMIT_MESSAGE" value="Interfaces, implementation, tests for UCs:&#10;- Execute exploration program" />
   </component>
 </project>
