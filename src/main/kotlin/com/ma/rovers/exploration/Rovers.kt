@@ -4,6 +4,14 @@ import com.ma.rovers.common.*
 
 class Field (length: IntSize, width: IntSize): IField{
     private val cells: Array<Array<ICell>> = Array(length.size){Array(width.size){Cell(this)} }
+    init {
+        for (x in 0..<length.size)
+            for (y in 0..<width.size) {
+                val theCell = cells[x][y]
+                (theCell as Cell).coords = Point(x, y)
+            }
+    }
+
     override val length: IntSize
         get() = IntSize(cells.size)
     override val width: IntSize
@@ -13,26 +21,27 @@ class Field (length: IntSize, width: IntSize): IField{
             else
                 IntSize(0)
 
-    override fun cell(x: Int, y: Int): ICell {
-        if ((x !in 0..< length.size) || (y !in 0..< width.size))
-            throw IndexOutOfBoundsException("Cell index [$x, $y] is out of bound")
-        return cells[x][y]
+    override fun cell(coordinates: Point): ICell {
+        if ((coordinates.x !in 0..< length.size) ||
+            (coordinates.y !in 0..< width.size))
+            throw IndexOutOfBoundsException("Cell index [${coordinates.x}, ${coordinates.y}] is out of bound")
+        return cells[coordinates.x][coordinates.y]
     }
 
-    override fun placeObject(obj: IFieldObject, x: Int, y: Int) {
-        //cell(x, y).placeObject(obj)
-        if ((x !in 0..< length.size) || (y !in 0..< width.size))
-            throw IndexOutOfBoundsException("Cell index [$x, $y] is out of bound")
-        (cells[x][y] as Cell).locatedObj = obj
-        (obj as FieldObject).cell = cells[x][y]
+    override fun placeObject(obj: IFieldObject, coordinates: Point) {
+        if ((coordinates.x !in 0..< length.size) ||
+            (coordinates.y !in 0..< width.size))
+            throw IndexOutOfBoundsException("Cell index [${coordinates.x}, ${coordinates.y}] is out of bound")
+        (cells[coordinates.x][coordinates.y] as Cell).locatedObj = obj
+        (obj as FieldObject).cell = cells[coordinates.x][coordinates.y]
     }
 
-    override fun removeObject(x: Int, y: Int) {
-        //cell(x, y).removeObject()
-        if ((x !in 0..< length.size) || (y !in 0..< width.size))
-            throw IndexOutOfBoundsException("Cell index [$x, $y] is out of bound")
-        (cells[x][y] as Cell).locatedObj = null
-
+    override fun removeObject(coordinates: Point) {
+        if ((coordinates.x !in 0..< length.size) ||
+            (coordinates.y !in 0..< width.size))
+            throw IndexOutOfBoundsException("Cell index [${coordinates.x}, ${coordinates.y}] is out of bound")
+        ((cells[coordinates.x][coordinates.y] as Cell).locatedObj as FieldObject).cell = null
+        (cells[coordinates.x][coordinates.y] as Cell).locatedObj = null
     }
 
 }
@@ -40,6 +49,10 @@ class Field (length: IntSize, width: IntSize): IField{
 class Cell(private val owner: IField): ICell{
     override val ownerField: IField
         get() = owner
+
+    internal lateinit var coords: Point
+    override val coordinates: Point
+        get() = coords
 
     internal var locatedObj: IFieldObject? = null
 
@@ -64,4 +77,26 @@ class Rover(direction: Direction = Direction.NORTH): FieldObject(), IRover{
     }
     override val cameraDirection: Direction
         get() = camDirection
+
+    private fun turn(right: Boolean){
+        val currentIndex = Direction.entries.indexOf(cameraDirection)
+        val newIndex = currentIndex + (if (right) 1 else -1)
+        val newDirection = when (newIndex){
+            -1 -> Direction.entries.last()
+            Direction.entries.size -> Direction.entries.first()
+            else -> Direction.entries[newIndex]
+        }
+        setCameraDirection(newDirection)
+    }
+    override fun turnRight() {
+        turn(true)
+    }
+
+    override fun turnLeft() {
+        turn(false)
+    }
+
+    override fun moveForward() {
+        TODO("Not yet implemented")
+    }
 }

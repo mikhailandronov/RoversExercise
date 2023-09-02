@@ -17,12 +17,13 @@ interface IField{
     val width: IntSize
     val length: IntSize
 
-    fun cell(x: Int, y: Int): ICell
-    fun placeObject(obj: IFieldObject, x: Int, y: Int)
-    fun removeObject(x: Int, y: Int)
+    fun cell(coordinates: Point): ICell
+    fun placeObject(obj: IFieldObject, coordinates: Point)
+    fun removeObject(coordinates: Point)
 }
 interface ICell{
     val ownerField: IField
+    val coordinates: Point
     val locatedObject: IFieldObject?
 //    fun placeObject(obj: IFieldObject)
 //    fun removeObject()
@@ -32,8 +33,11 @@ interface IFieldObject{
 }
 
 enum class Direction {
-    NORTH, SOUTH, WEST, EAST
+    NORTH, EAST, SOUTH, WEST
 }
 interface IRover: IFieldObject{
     val cameraDirection: Direction
+    fun turnRight()
+    fun turnLeft()
+    fun moveForward()
 }

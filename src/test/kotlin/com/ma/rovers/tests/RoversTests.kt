@@ -1,13 +1,11 @@
 package com.ma.rovers.tests
 
+import com.ma.rovers.common.*
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.*
 
-import com.ma.rovers.common.IntSize
 import com.ma.rovers.exploration.*
-import com.ma.rovers.common.Direction
-import com.ma.rovers.common.IField
-import com.ma.rovers.common.IFieldObject
+
 class RoversTests {
     @Test
     fun `Describe field`() { // Описать плато
@@ -25,8 +23,9 @@ class RoversTests {
         val owningFieldsSet = mutableSetOf<IField>()
         for (x in 0..<length)
             for (y in 0..<width) {
-                cellsSet.add(field.cell(x, y).hashCode())
-                owningFieldsSet.add(field.cell(x, y).ownerField)
+                val theCell = field.cell(Point(x, y))
+                cellsSet.add(theCell.hashCode())
+                owningFieldsSet.add(theCell.ownerField)
             }
 
         // Then
@@ -49,6 +48,16 @@ class RoversTests {
 
         assertTrue(owningFieldsSet.elementAt(0) == field, "All cells should belong to the owning field")
 
+        val bottomLeft = Point(0, 0)
+        val topRight = Point(length-1, width-1)
+        assertEquals(
+            bottomLeft, field.cell(bottomLeft).coordinates,
+            "Field bottom-left cell coordinates are not those that are expected"
+        )
+        assertEquals(
+            topRight, field.cell(topRight).coordinates,
+            "Field top-right cell coordinates are not those that are expected"
+        )
     }
 
     @Test
@@ -62,21 +71,25 @@ class RoversTests {
         )
 
         val rover:IFieldObject = Rover()
-        val xPoint = 2
-        val yPoint = 2
+        val coordinates = Point(2, 2)
 
         // When
-        field.placeObject(rover, xPoint, yPoint)
+        field.placeObject(rover, coordinates)
 
         // Then
         assertEquals(
-            rover, field.cell(xPoint, yPoint).locatedObject,
+            rover, field.cell(coordinates).locatedObject,
             "Located object is not the same that was placed"
         )
 
         assertTrue(
-            field.cell(xPoint, yPoint).locatedObject is Rover,
+            field.cell(coordinates).locatedObject is Rover,
             "Located object is not Rover"
+        )
+
+        assertEquals(
+            field.cell(coordinates), rover.location,
+            "Rover location should reference the cell it was placed on"
         )
 
         assertEquals(
@@ -85,12 +98,17 @@ class RoversTests {
         )
 
         // When
-        field.removeObject(xPoint, yPoint)
+        field.removeObject(coordinates)
 
         // Then
         assertEquals(
-            null, field.cell(xPoint, yPoint).locatedObject,
+            null, field.cell(coordinates).locatedObject,
             "Located object should be null"
+        )
+
+        assertEquals(
+            null, rover.location,
+            "Rover location should be null after deletion"
         )
 
     }
@@ -106,19 +124,16 @@ class RoversTests {
         )
 
         val rover:IFieldObject = Rover()
-        val xPoint = 2
-        val yPoint = 2
-
-        field.placeObject(rover, xPoint, yPoint)
 
         // When
-
+        val coordinates = Point(2, 2)
+        field.placeObject(rover, coordinates)
 
         // Then
-//        assertEquals(
-//            rover, field.cell(xPoint, yPoint).locatedObject,
-//            "Located object is not the same that was placed"
-//        )
+        assertEquals(
+            rover.location?.coordinates, coordinates,
+            "Location coordinates are not those where rover was placed"
+        )
 
     }
 
@@ -143,7 +158,25 @@ class RoversTests {
 
     @Test
     fun `Turn rover right or left`() { // Повернуть марсоход
-        TODO("Not yet implemented")
+        //Given
+        val rover = Rover()
+
+        //When
+        rover.turnRight()
+
+        //Then
+        assertEquals(
+            Direction.EAST, rover.cameraDirection,
+            "Rover location should be EAST but now it is " + rover.cameraDirection
+        )
+        //When
+        rover.turnLeft()
+        rover.turnLeft()
+        //Then
+        assertEquals(
+            Direction.WEST, rover.cameraDirection,
+            "Rover location should be WEST but now it is " + rover.cameraDirection
+        )
     }
 
     @Test
