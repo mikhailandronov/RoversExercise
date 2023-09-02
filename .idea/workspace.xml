@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6dfad347-2457-4600-ae58-cf0db3c86857" name="Changes" comment="Removed older code of Gradle tutorial">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6dfad347-2457-4600-ae58-cf0db3c86857" name="Changes" comment="Removed older code of Gradle tutorial" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,6 +27,17 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="RoversExercise" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="RoversExercise" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="RoversExercise" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -233,7 +242,7 @@
       <workItem from="1693657109102" duration="559000" />
       <workItem from="1693658177091" duration="858000" />
       <workItem from="1693659110001" duration="438000" />
-      <workItem from="1693659724182" duration="246000" />
+      <workItem from="1693659724182" duration="469000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit: interfaces, implementation, tests for UCs:&#10;- Describe field&#10;- Place rover on the field and remove it&#10;- Set and get camera direction">
       <created>1693633674284</created>
@@ -284,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693659225487</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Removed older code of Gradle tutorial">
+      <created>1693660056513</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1693660056513</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
