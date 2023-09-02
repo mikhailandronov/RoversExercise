@@ -1,10 +1,12 @@
 package com.ma.rovers.tests
 
 import com.ma.rovers.common.*
-import org.junit.jupiter.api.Test
+import com.ma.rovers.exploration.Field
+import com.ma.rovers.exploration.Rover
 import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertThrows
 
-import com.ma.rovers.exploration.*
 
 class RoversTests {
     @Test
@@ -96,6 +98,12 @@ class RoversTests {
             field, rover.location?.ownerField,
             "Rover location should reference the same field it was placed on"
         )
+
+        // When
+        val rover2= Rover()
+        // Then
+        assertThrows<IllegalArgumentException>("Cell is busy: exception should be thrown") {field.placeObject(rover2, coordinates)}
+
 
         // When
         field.removeObject(coordinates)
@@ -201,10 +209,72 @@ class RoversTests {
             Point(2, 3), rover.location?.coordinates,
             "Location coordinates are not those expected"
         )
+
+        // When
+        repeat(width) {rover.moveForward()}
+
+        // Then
+        assertEquals(
+            Point(2, width-1), rover.location?.coordinates,
+            "Location coordinates are not those expected"
+        )
+
+        // When
+        rover.turnLeft()
+        repeat(length) {rover.moveForward()}
+
+        // Then
+        assertEquals(
+            Point(0, width-1), rover.location?.coordinates,
+            "Location coordinates are not those expected"
+        )
     }
 
     @Test
     fun `Execute exploration program`() { // Выполнить программу перемещения (исследования)
-        TODO("Not yet implemented")
+        // Given
+        val length = 6
+        val width = 6
+        val field: IField = Field(
+            IntSize(length),
+            IntSize(width)
+        )
+
+        val rover1 = Rover() // Direction = NORTH
+        field.placeObject(rover1, Point(1, 2))
+
+        // When
+        val program0 = "LMLMLZMLMM"
+        // Then
+        assertThrows<IllegalArgumentException>("Incorrect program: exception should be thrown") {rover1.executeProgram(program0)}
+
+        // When
+        val program1 = "LMLMLMLMM"
+        rover1.executeProgram(program1)
+        // Then
+        assertEquals(
+            Point(1,3), rover1.location?.coordinates,
+            "Final location is not what expected"
+        )
+        assertEquals(
+            Direction.NORTH, rover1.cameraDirection,
+            "Final camera direction is not what expected"
+        )
+
+        // When
+        val rover2 = Rover()
+        rover2.setCameraDirection(Direction.EAST)
+        field.placeObject(rover2, Point(3, 3))
+        val program2 = "MMRMMRMRRM"
+        rover2.executeProgram(program2)
+        // Then
+        assertEquals(
+            Point(5,1), rover2.location?.coordinates,
+            "Final location is not what expected"
+        )
+        assertEquals(
+            Direction.EAST, rover2.cameraDirection,
+            "Final camera direction is not what expected"
+        )
     }
 }

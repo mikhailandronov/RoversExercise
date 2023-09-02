@@ -32,6 +32,10 @@ class Field (length: IntSize, width: IntSize): IField{
         if ((coordinates.x !in 0..< length.size) ||
             (coordinates.y !in 0..< width.size))
             throw IndexOutOfBoundsException("Cell index [${coordinates.x}, ${coordinates.y}] is out of bound")
+
+        if ((cells[coordinates.x][coordinates.y] as Cell).locatedObj != null)
+            throw IllegalArgumentException("Cell [${coordinates.x}, ${coordinates.y}] is busy; you can't place object here")
+
         (cells[coordinates.x][coordinates.y] as Cell).locatedObj = obj
         (obj as FieldObject).cell = cells[coordinates.x][coordinates.y]
     }
@@ -100,18 +104,36 @@ class Rover(direction: Direction = Direction.NORTH): FieldObject(), IRover{
         if (location == null) return
         val currentLocation = location
         val currentCoordinates = currentLocation!!.coordinates
-        val newX = when (cameraDirection){
+
+        var newX = when (cameraDirection){
             Direction.EAST -> currentCoordinates.x+1
             Direction.WEST -> currentCoordinates.x-1
             else -> currentCoordinates.x
         }
-        val newY = when (cameraDirection){
+
+        var newY = when (cameraDirection){
             Direction.NORTH -> currentCoordinates.y+1
             Direction.SOUTH -> currentCoordinates.y-1
             else -> currentCoordinates.y
         }
 
+        if (newX < 0 || newX >= currentLocation.ownerField.length.size) newX = currentCoordinates.x
+        if (newY < 0 || newY >= currentLocation.ownerField.width.size) newY = currentCoordinates.y
+
         currentLocation.ownerField.removeObject(currentCoordinates)
         currentLocation.ownerField.placeObject(this, Point(newX, newY))
+    }
+
+    override fun executeProgram(program: String) {
+        val regex = Regex(pattern = "^[LRM]+$")
+        if (!regex.matches(program))
+            throw IllegalArgumentException("Only L, R, M are allowed as program steps symbols")
+
+        for (step in program)
+            when (step){
+                'L' -> turnLeft()
+                'R' -> turnRight()
+                'M' -> moveForward()
+            }
     }
 }

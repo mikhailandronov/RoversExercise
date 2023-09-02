@@ -38,4 +38,5 @@ interface IRover: IFieldObject{
     fun turnRight()
     fun turnLeft()
     fun moveForward()
+    fun executeProgram(program: String)
 }
