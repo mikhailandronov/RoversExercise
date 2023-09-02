@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6dfad347-2457-4600-ae58-cf0db3c86857" name="Changes" comment="Removed older code of Gradle tutorial">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,24 +28,7 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="RoversExerсise" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="RoversExerсise" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="RoversExerсise" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="application" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="RoversExerсise" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
+                <item name="RoversExercise" type="f1a62948:ProjectNode" />
               </path>
             </expand>
             <select />
@@ -90,10 +72,10 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Problems",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable",
+    "settings.editor.selected.configurable": "web.server",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -114,7 +96,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Gradle.RoversTests (1)">
-    <configuration name="RoversExerсise [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RoversExercise [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -230,7 +212,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.RoversTests (1)" />
-        <item itemvalue="Gradle.RoversExerсise [build]" />
+        <item itemvalue="Gradle.RoversExercise [build]" />
         <item itemvalue="Gradle.RoversTests.Make one step forward" />
         <item itemvalue="Gradle.RoversTests.Turn rover right or left" />
         <item itemvalue="Gradle.RoversTests.Place rover on the field and remove it" />
@@ -250,7 +232,8 @@
       <workItem from="1693490437715" duration="40823000" />
       <workItem from="1693657109102" duration="559000" />
       <workItem from="1693658177091" duration="858000" />
-      <workItem from="1693659110001" duration="18000" />
+      <workItem from="1693659110001" duration="438000" />
+      <workItem from="1693659724182" duration="246000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit: interfaces, implementation, tests for UCs:&#10;- Describe field&#10;- Place rover on the field and remove it&#10;- Set and get camera direction">
       <created>1693633674284</created>
@@ -294,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693658379803</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Removed older code of Gradle tutorial">
+      <created>1693659225487</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1693659225487</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
