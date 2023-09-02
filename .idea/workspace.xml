@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6dfad347-2457-4600-ae58-cf0db3c86857" name="Changes" comment="IDEA settings">
+    <list default="true" id="6dfad347-2457-4600-ae58-cf0db3c86857" name="Changes" comment="Removed older code of Gradle tutorial">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
@@ -29,23 +29,24 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="RoversExerñise" type="f1a62948:ProjectNode" />
+                <item name="RoversExerÑise" type="f1a62948:ProjectNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="RoversExerñise" type="f1a62948:ProjectNode" />
+                <item name="RoversExerÑise" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="RoversExerñise" type="f1a62948:ProjectNode" />
+                <item name="RoversExerÑise" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="application" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="RoversExerñise" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="RoversExerÑise" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -83,7 +84,7 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Users/mikha/IdeaProjects/RoversExerñise/src/main/kotlin/com/ma/rovers",
+    "last_opened_file_path": "C:/Users/mikha/IdeaProjects/RoversExercise",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -101,7 +102,7 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\mikha\IdeaProjects\RoversExerñise\src\main\kotlin" />
+      <recent name="C:\Users\mikha\IdeaProjects\RoversExerï¿½ise\src\main\kotlin" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.gradle.tutorial" />
@@ -113,6 +114,27 @@
     </option>
   </component>
   <component name="RunManager" selected="Gradle.RoversTests (1)">
+    <configuration name="RoversExerÑise [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="RoversTests (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -182,29 +204,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="RoversTests.Set and get camera direction" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.ma.rovers.tests.RoversTests.Set and get camera direction&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="RoversTests.Turn rover right or left" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -231,10 +230,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.RoversTests (1)" />
+        <item itemvalue="Gradle.RoversExerÑise [build]" />
         <item itemvalue="Gradle.RoversTests.Make one step forward" />
         <item itemvalue="Gradle.RoversTests.Turn rover right or left" />
         <item itemvalue="Gradle.RoversTests.Place rover on the field and remove it" />
-        <item itemvalue="Gradle.RoversTests.Set and get camera direction" />
       </list>
     </recent_temporary>
   </component>
@@ -250,6 +249,8 @@
       <workItem from="1693334004409" duration="5781000" />
       <workItem from="1693490437715" duration="40823000" />
       <workItem from="1693657109102" duration="559000" />
+      <workItem from="1693658177091" duration="858000" />
+      <workItem from="1693659110001" duration="18000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit: interfaces, implementation, tests for UCs:&#10;- Describe field&#10;- Place rover on the field and remove it&#10;- Set and get camera direction">
       <created>1693633674284</created>
@@ -286,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693656985040</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Removed older code of Gradle tutorial">
+      <created>1693658379803</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1693658379803</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,6 +306,7 @@
     <MESSAGE value="Interfaces, implementation, tests for UCs:&#10;- Make one step forward" />
     <MESSAGE value="Interfaces, implementation, tests for UCs:&#10;- Execute exploration program" />
     <MESSAGE value="IDEA settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="IDEA settings" />
+    <MESSAGE value="Removed older code of Gradle tutorial" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed older code of Gradle tutorial" />
   </component>
 </project>
