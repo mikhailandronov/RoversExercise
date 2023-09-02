@@ -97,6 +97,21 @@ class Rover(direction: Direction = Direction.NORTH): FieldObject(), IRover{
     }
 
     override fun moveForward() {
-        TODO("Not yet implemented")
+        if (location == null) return
+        val currentLocation = location
+        val currentCoordinates = currentLocation!!.coordinates
+        val newX = when (cameraDirection){
+            Direction.EAST -> currentCoordinates.x+1
+            Direction.WEST -> currentCoordinates.x-1
+            else -> currentCoordinates.x
+        }
+        val newY = when (cameraDirection){
+            Direction.NORTH -> currentCoordinates.y+1
+            Direction.SOUTH -> currentCoordinates.y-1
+            else -> currentCoordinates.y
+        }
+
+        currentLocation.ownerField.removeObject(currentCoordinates)
+        currentLocation.ownerField.placeObject(this, Point(newX, newY))
     }
 }

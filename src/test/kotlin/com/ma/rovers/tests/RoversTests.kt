@@ -131,7 +131,7 @@ class RoversTests {
 
         // Then
         assertEquals(
-            rover.location?.coordinates, coordinates,
+            coordinates, rover.location?.coordinates,
             "Location coordinates are not those where rover was placed"
         )
 
@@ -181,7 +181,26 @@ class RoversTests {
 
     @Test
     fun `Make one step forward`() { // Пройти шаг вперед
-        TODO("Not yet implemented")
+        // Given
+        val length = 10
+        val width = 20
+        val field: IField = Field(
+            IntSize(length),
+            IntSize(width)
+        )
+
+        val rover = Rover()
+        val coordinates = Point(2, 2)
+        field.placeObject(rover, coordinates)
+
+        // When
+        rover.moveForward()
+
+        // Then
+        assertEquals(
+            Point(2, 3), rover.location?.coordinates,
+            "Location coordinates are not those expected"
+        )
     }
 
     @Test

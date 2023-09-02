@@ -25,8 +25,6 @@ interface ICell{
     val ownerField: IField
     val coordinates: Point
     val locatedObject: IFieldObject?
-//    fun placeObject(obj: IFieldObject)
-//    fun removeObject()
 }
 interface IFieldObject{
     val location: ICell?
