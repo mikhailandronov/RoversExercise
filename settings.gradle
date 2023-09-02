@@ -5,5 +5,5 @@ pluginManagement {
     }
     
 }
-rootProject.name = 'FizzBuzzGradleTutorial'
+rootProject.name = 'RoversExerсise'
 
