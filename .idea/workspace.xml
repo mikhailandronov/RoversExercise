@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="281a536a-0953-49b6-8089-3eb305bed1a3" name="Changes" comment="Removed older code of Gradle tutorial" />
+    <list default="true" id="281a536a-0953-49b6-8089-3eb305bed1a3" name="Changes" comment="Update .gitignore">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,6 +55,13 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -77,7 +87,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.RoversExercise [run]">
+  <component name="RunManager" selected="Gradle.RoversTests">
     <configuration name="RoversExercise [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -145,8 +155,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.RoversExercise [run]" />
         <item itemvalue="Gradle.RoversTests" />
+        <item itemvalue="Gradle.RoversExercise [run]" />
         <item itemvalue="Gradle.RoversExercise [build]" />
       </list>
     </recent_temporary>
@@ -159,7 +169,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1693661021002</updated>
-      <workItem from="1693661023634" duration="1047000" />
+      <workItem from="1693661023634" duration="4956000" />
     </task>
     <task id="LOCAL-00001" summary="Removed older code of Gradle tutorial">
       <created>1693661835650</created>
@@ -168,7 +178,21 @@
       <option name="project" value="LOCAL" />
       <updated>1693661835650</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Refactoring to move Field and Cell classes to separate file (Fields.kt)">
+      <created>1693662733116</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1693662733116</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update .gitignore">
+      <created>1693662924288</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1693662924288</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +200,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Removed older code of Gradle tutorial" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed older code of Gradle tutorial" />
+    <MESSAGE value="Refactoring to move Field and Cell classes to separate file (Fields.kt)" />
+    <MESSAGE value="Update .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update .gitignore" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/RoversExercise$RoversTests.ic" NAME="RoversTests Coverage Results" MODIFIED="1693771282091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

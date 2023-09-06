@@ -50,7 +50,7 @@ class Field (length: IntSize, width: IntSize): IField{
 
 }
 
-class Cell(private val owner: IField): ICell{
+internal class Cell(private val owner: IField): ICell{
     override val ownerField: IField
         get() = owner
 
