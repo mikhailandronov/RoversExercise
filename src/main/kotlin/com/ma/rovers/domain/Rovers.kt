@@ -1,6 +1,4 @@
-package com.ma.rovers.exploration
-
-import com.ma.rovers.common.*
+package com.ma.rovers.domain
 
 open class FieldObject() : IFieldObject{
     internal var cell: ICell? = null

@@ -1,14 +1,14 @@
 package com.ma.rovers.tests
 
-import com.ma.rovers.common.*
-import com.ma.rovers.exploration.Field
-import com.ma.rovers.exploration.Rover
+import com.ma.rovers.domain.*
+import com.ma.rovers.domain.Field
+import com.ma.rovers.domain.Rover
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
 
 
-class RoversTests {
+class DomainTests {
     @Test
     fun `Describe field`() { // Описать плато
         // Given

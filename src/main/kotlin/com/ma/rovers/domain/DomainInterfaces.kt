@@ -1,4 +1,4 @@
-package com.ma.rovers.common
+package com.ma.rovers.domain
 
 @JvmInline
 value class IntSize(val size: Int){
@@ -6,7 +6,6 @@ value class IntSize(val size: Int){
         require(size > 0) {"Integer dimension size should be positive"}
     }
 }
-
 data class Point(val x: Int, val y: Int) {
     init {
         require(x >= 0) { "x must be non-negative" }

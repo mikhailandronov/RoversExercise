@@ -1,9 +1,7 @@
-package com.ma.rovers.exploration
-
-import com.ma.rovers.common.*
+package com.ma.rovers.domain
 
 class Field (length: IntSize, width: IntSize): IField{
-    private val cells: Array<Array<ICell>> = Array(length.size){Array(width.size){Cell(this)} }
+    private val cells: Array<Array<ICell>> = Array(length.size){Array(width.size){ Cell(this) } }
     init {
         for (x in 0..<length.size)
             for (y in 0..<width.size) {
