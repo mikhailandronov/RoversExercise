@@ -21,6 +21,11 @@ class RoversTests {
             IntSize(width)
         )
 
+        // Then
+        assertThrows<IndexOutOfBoundsException>("Cell index out of bounds: exception should be thrown")
+        {field.cell(Point(length, width))}
+
+        // When
         val cellsSet = mutableSetOf<Int>()
         val owningFieldsSet = mutableSetOf<IField>()
         for (x in 0..<length)
@@ -76,6 +81,9 @@ class RoversTests {
         val coordinates = Point(2, 2)
 
         // When
+        assertThrows<IndexOutOfBoundsException>("Cell index out of bounds: exception should be thrown")
+        {field.placeObject(rover, Point(length, width))}
+
         field.placeObject(rover, coordinates)
 
         // Then
@@ -106,6 +114,9 @@ class RoversTests {
 
 
         // When
+        assertThrows<IndexOutOfBoundsException>("Cell index out of bounds: exception should be thrown")
+        {field.removeObject(Point(length, width))}
+
         field.removeObject(coordinates)
 
         // Then
