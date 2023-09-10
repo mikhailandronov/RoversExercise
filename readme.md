@@ -4,10 +4,10 @@
 
 ### Пакеты, интерфейсы, классы
 
-* domain
-* usecases
-* repositories
-* controllers
-* presenters
-* views
-* config
+* domain - IDataObject
+* usecases - IBusinessService
+* repositories - IDataService
+* controllers - DataObject.Operation
+* presenters - ListView, FormView 
+* views - ListView, FormView
+* config - Application
