@@ -1,0 +1,48 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface IDomainEntity{
+    domainProperty: Int
+    domainOperation()
+}
+class DomainEntity
+IDomainEntity <|-l- DomainEntity
+
+interface IRepository{
+    save()
+    get()
+    delete()
+}
+class Repository
+IRepository <|-r- Repository
+
+interface IPresenter{
+    presentResult()
+}
+class Presenter
+IPresenter <|-r- Presenter
+
+interface IView{
+    displayInfo()
+}
+class View
+IView <|-r- View
+
+interface IUseCase{
+    execute()
+}
+class UseCase
+IUseCase <|-d- UseCase
+
+UseCase ..> IDomainEntity
+
+class Controller{
+    onBusinessEvent()
+}
+
+Controller .l.> IUseCase
+Controller .d.> IRepository
+Controller .u.> IPresenter
+
+Presenter .u.> IView
+@enduml
