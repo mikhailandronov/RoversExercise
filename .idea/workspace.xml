@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="281a536a-0953-49b6-8089-3eb305bed1a3" name="Changes" comment="Added overall architecture diagram">
-      <change afterPath="$PROJECT_DIR$/src/diagrams/CleanArchitecture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/usecases/IRoverManager.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/usecases/IUseCaseResult.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/usecases/RoverManager.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/ma/rovers/tests/UseCasesTests.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/diagrams/CleanArchitecture.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/diagrams/CleanArchitecture.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/domain/Rovers.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/domain/Rovers.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/repositories/InMemoryFieldsRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/repositories/InMemoryFieldsRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/ma/rovers/tests/DomainTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/ma/rovers/tests/DomainTests.kt" afterDir="false" />
+    <list default="true" id="281a536a-0953-49b6-8089-3eb305bed1a3" name="Changes" comment="Implemented RoverManager (use-cases) and tests for it">
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/ma/rovers/tests/UseCasesTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/ma/rovers/tests/UseCasesTests.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +111,7 @@
       <recent name="C:\Users\mikha\IdeaProjects\RoversExercise\src\main\kotlin\com\ma\rovers\domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.UseCasesTests.runRoverProgram">
+  <component name="RunManager" selected="Gradle.UseCasesTests">
     <configuration name="DomainTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -239,8 +229,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.UseCasesTests.runRoverProgram" />
         <item itemvalue="Gradle.UseCasesTests" />
+        <item itemvalue="Gradle.UseCasesTests.runRoverProgram" />
         <item itemvalue="Gradle.UseCasesTests.putRoverToField" />
         <item itemvalue="Gradle.DomainTests" />
         <item itemvalue="Gradle.DomainTests.Make one step forward" />
@@ -261,7 +251,7 @@
       <workItem from="1694345881618" duration="6112000" />
       <workItem from="1695044761064" duration="325000" />
       <workItem from="1695906275999" duration="409000" />
-      <workItem from="1695906707573" duration="23843000" />
+      <workItem from="1695906707573" duration="26009000" />
     </task>
     <task id="LOCAL-00001" summary="Removed older code of Gradle tutorial">
       <created>1693661835650</created>
@@ -312,7 +302,35 @@
       <option name="project" value="LOCAL" />
       <updated>1694351144287</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added overall architecture diagram">
+      <created>1696003551747</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1696003551747</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Completed InMemoryFieldsRepository">
+      <created>1696003686520</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696003686520</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Implemented movement blocking when next cell is busy">
+      <created>1696003780513</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696003780513</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Implemented RoverManager (use-cases) and tests for it">
+      <created>1696003908962</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1696003908962</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,7 +344,10 @@
     <MESSAGE value="Refactoring of packages structure" />
     <MESSAGE value="Added InMemoryFieldsRepository and tests for it" />
     <MESSAGE value="Added overall architecture diagram" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added overall architecture diagram" />
+    <MESSAGE value="Completed InMemoryFieldsRepository" />
+    <MESSAGE value="Implemented movement blocking when next cell is busy" />
+    <MESSAGE value="Implemented RoverManager (use-cases) and tests for it" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented RoverManager (use-cases) and tests for it" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test
 
 class UseCasesTests {
     @Test
-    fun defineField() { // Создать и сохранить плато
+    fun `Define field`() { // Создать и сохранить плато
         // Given
         val repository = InMemoryFieldsRepository()
         val roverMgr: IRoverManager = RoverManager(repository)
@@ -39,7 +39,7 @@ class UseCasesTests {
     }
 
     @Test
-    fun putRoverToField() { // Поместить марсоход на плато
+    fun `Put rover to field`() { // Поместить марсоход на плато
         // Given
         val repository = InMemoryFieldsRepository()
         val roverMgr: IRoverManager = RoverManager(repository)
@@ -71,7 +71,7 @@ class UseCasesTests {
     }
 
     @Test
-    fun runRoverProgram() { // Вызвать на выполнение программу марсохода на плато
+    fun `Run rover program`() { // Вызвать на выполнение программу марсохода на плато
         // Given
         val repository = InMemoryFieldsRepository()
         val roverMgr: IRoverManager = RoverManager(repository)
