@@ -4,15 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="281a536a-0953-49b6-8089-3eb305bed1a3" name="Changes" comment="Refactoring of packages structure">
-      <change afterPath="$PROJECT_DIR$/src/diagrams/CleanArchitecture.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="281a536a-0953-49b6-8089-3eb305bed1a3" name="Changes" comment="Added overall architecture diagram">
+      <change afterPath="$PROJECT_DIR$/src/diagrams/CleanArchitecture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/usecases/IRoverManager.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/usecases/IUseCaseResult.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/usecases/RoverManager.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/ma/rovers/tests/UseCasesTests.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/repositories/IFieldsRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/repositories/IFieldsRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/diagrams/CleanArchitecture.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/diagrams/CleanArchitecture.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/domain/Rovers.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/domain/Rovers.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/repositories/InMemoryFieldsRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/repositories/InMemoryFieldsRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/ma/rovers/tests/RepositoryTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/ma/rovers/tests/RepositoryTests.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/ma/rovers/tests/DomainTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/ma/rovers/tests/DomainTests.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,10 +67,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Interface" />
-        <option value="Kotlin Class" />
-        <option value="Kotlin File" />
         <option value="UML Class" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -101,12 +104,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/mikha/IdeaProjects/RoversExercise/src/diagrams",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "Settings.Markdown",
+    "settings.editor.splitter.proportion": "0.4074457",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -116,8 +121,8 @@
       <recent name="C:\Users\mikha\IdeaProjects\RoversExercise\src\main\kotlin\com\ma\rovers\domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.InMemoryRepositoryTests">
-    <configuration name="InMemoryRepositoryTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.UseCasesTests.runRoverProgram">
+    <configuration name="DomainTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -130,7 +135,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.ma.rovers.tests.InMemoryRepositoryTests&quot;" />
+            <option value="&quot;com.ma.rovers.tests.DomainTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -140,7 +145,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="InMemoryRepositoryTests.Save field" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DomainTests.Make one step forward" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -153,7 +158,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.ma.rovers.tests.InMemoryRepositoryTests.Save field&quot;" />
+            <option value="&quot;com.ma.rovers.tests.DomainTests.Make one step forward&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -163,49 +168,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="RoversExercise [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="RoversExercise [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="run" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="RoversTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UseCasesTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -218,7 +181,53 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.ma.rovers.tests.RoversTests&quot;" />
+            <option value="&quot;com.ma.rovers.tests.UseCasesTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="UseCasesTests.putRoverToField" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.ma.rovers.tests.UseCasesTests.putRoverToField&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="UseCasesTests.runRoverProgram" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.ma.rovers.tests.UseCasesTests.runRoverProgram&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -230,11 +239,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.InMemoryRepositoryTests" />
-        <item itemvalue="Gradle.InMemoryRepositoryTests.Save field" />
-        <item itemvalue="Gradle.RoversTests" />
-        <item itemvalue="Gradle.RoversExercise [run]" />
-        <item itemvalue="Gradle.RoversExercise [build]" />
+        <item itemvalue="Gradle.UseCasesTests.runRoverProgram" />
+        <item itemvalue="Gradle.UseCasesTests" />
+        <item itemvalue="Gradle.UseCasesTests.putRoverToField" />
+        <item itemvalue="Gradle.DomainTests" />
+        <item itemvalue="Gradle.DomainTests.Make one step forward" />
       </list>
     </recent_temporary>
   </component>
@@ -249,7 +258,10 @@
       <workItem from="1693661023634" duration="4956000" />
       <workItem from="1694183223192" duration="11532000" />
       <workItem from="1694326142019" duration="1031000" />
-      <workItem from="1694345881618" duration="4878000" />
+      <workItem from="1694345881618" duration="6112000" />
+      <workItem from="1695044761064" duration="325000" />
+      <workItem from="1695906275999" duration="409000" />
+      <workItem from="1695906707573" duration="23843000" />
     </task>
     <task id="LOCAL-00001" summary="Removed older code of Gradle tutorial">
       <created>1693661835650</created>
@@ -286,7 +298,21 @@
       <option name="project" value="LOCAL" />
       <updated>1694188305672</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added InMemoryFieldsRepository and tests for it">
+      <created>1694351114307</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1694351114307</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added overall architecture diagram">
+      <created>1694351144287</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1694351144287</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,7 +324,13 @@
     <MESSAGE value="Update .gitignore" />
     <MESSAGE value="Updated RoversTests.kt to increase coverage" />
     <MESSAGE value="Refactoring of packages structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring of packages structure" />
+    <MESSAGE value="Added InMemoryFieldsRepository and tests for it" />
+    <MESSAGE value="Added overall architecture diagram" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added overall architecture diagram" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RoversExercise$RoversTests.ic" NAME="RoversTests Coverage Results" MODIFIED="1694183902215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
