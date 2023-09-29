@@ -239,6 +239,25 @@ class DomainTests {
             Point(0, width-1), rover.location?.coordinates,
             "Location coordinates are not those expected"
         )
+
+        // When
+        val rover2 = Rover()
+        // Then
+        assertThrows<IllegalArgumentException>("Cell is busy: exception should be thrown")
+        {field.placeObject(rover2, Point(0, width-1))}
+
+        // When
+        val coordinates2 = Point(6, width-1)
+        field.placeObject(rover2, coordinates2)
+        repeat(2) {rover.turnRight()}
+        repeat(length) {rover.moveForward()}
+
+        // Then
+        assertEquals(
+            Point(5, width-1), rover.location?.coordinates,
+            "Location coordinates are not those expected"
+        )
+
     }
 
     @Test

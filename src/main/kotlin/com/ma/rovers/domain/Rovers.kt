@@ -54,6 +54,7 @@ class Rover(direction: Direction = Direction.NORTH): FieldObject(), IRover{
 
         if (newX < 0 || newX >= currentLocation.ownerField.length.size) newX = currentCoordinates.x
         if (newY < 0 || newY >= currentLocation.ownerField.width.size) newY = currentCoordinates.y
+        if (currentLocation.ownerField.cell(Point(newX, newY)).locatedObject != null) return
 
         currentLocation.ownerField.removeObject(currentCoordinates)
         currentLocation.ownerField.placeObject(this, Point(newX, newY))
