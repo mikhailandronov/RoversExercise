@@ -6,30 +6,39 @@ interface IDomainEntity{
     domainOperation()
 }
 class DomainEntity
-IDomainEntity <|-l- DomainEntity
+DomainEntity -r-|> IDomainEntity
 
 interface IRepository{
     save()
     get()
     delete()
 }
+
 class Repository
-IRepository <|-r- Repository
+IRepository <|-l- Repository
+note bottom of Repository: Реализует \nработу с БД
 
 interface IPresenter{
     presentResult()
 }
-class Presenter
-IPresenter <|-r- Presenter
 
+class Presenter{
+    onButtonClick()
+}
+IPresenter <|-r- Presenter
+note top of Presenter: Реализует \nработу с UI
+
+/'
 interface IView{
     displayInfo()
 }
 class View
 IView <|-r- View
-
+Presenter .u.> IView
+'/
 interface IUseCase{
-    execute()
+    runCommand(): CommandResult
+    runQuery(): QueryResult
 }
 class UseCase
 IUseCase <|-d- UseCase
@@ -41,8 +50,9 @@ class Controller{
 }
 
 Controller .l.> IUseCase
-Controller .d.> IRepository
+UseCase .l.> IRepository
 Controller .u.> IPresenter
 
-Presenter .u.> IView
+Presenter .d.> Controller
+
 @enduml
