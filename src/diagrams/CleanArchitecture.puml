@@ -19,23 +19,15 @@ IRepository <|-l- Repository
 note bottom of Repository: Реализует \nработу с БД
 
 interface IPresenter{
-    presentResult()
+    formatViewModel()
 }
 
 class Presenter{
-    onButtonClick()
+
 }
 IPresenter <|-r- Presenter
-note top of Presenter: Реализует \nработу с UI
 
-/'
-interface IView{
-    displayInfo()
-}
-class View
-IView <|-r- View
-Presenter .u.> IView
-'/
+
 interface IUseCase{
     runCommand(): CommandResult
     runQuery(): QueryResult
@@ -46,13 +38,18 @@ IUseCase <|-d- UseCase
 UseCase ..> IDomainEntity
 
 class Controller{
-    onBusinessEvent()
+    onBusinessEvent(): ViewModel
 }
 
 Controller .l.> IUseCase
 UseCase .l.> IRepository
 Controller .u.> IPresenter
 
-Presenter .d.> Controller
+class UI{
+    onButtonClick()
+}
+note right of UI: Реализует \nработу с UI
+
+UI .l.> Controller
 
 @enduml
