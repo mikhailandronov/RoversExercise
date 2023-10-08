@@ -4,12 +4,10 @@ import com.ma.rovers.domain.Direction
 import com.ma.rovers.domain.IntSize
 import com.ma.rovers.domain.Point
 
-interface IRoverManager {
+interface IRoverUseCase {
     fun defineField(length: IntSize, width: IntSize): DefineFieldResult
 
     class DefineFieldResult(
-        val length: IntSize,
-        val width: IntSize,
         override val successful: Boolean = true,
         override val errorMessage: String = "") : IUseCaseResult {
     }
@@ -17,7 +15,6 @@ interface IRoverManager {
     fun putRoverToField(coordinates: Point, direction: Direction): PutRoverToFieldResult
 
     class PutRoverToFieldResult(
-        val coordinates: Point, val direction: Direction,
         override val successful: Boolean = true,
         override val errorMessage: String = "") : IUseCaseResult {
     }
@@ -25,9 +22,23 @@ interface IRoverManager {
     fun runRoverProgram(coordinates: Point, program: String): RunRoverProgramResult
 
     class RunRoverProgramResult(
-        val newCoordinates: Point,
-        val newDirection: Direction,
         override val successful: Boolean = true,
         override val errorMessage: String = "") : IUseCaseResult {
     }
+
+    fun getFieldState(): GetFieldStateResult
+
+    class GetFieldStateResult(
+        val length: Int,
+        val width: Int,
+        val rovers: Array<RoverInfo>,
+        override val successful: Boolean = true,
+        override val errorMessage: String = "") :IUseCaseResult {
+    }
+
+    data class RoverInfo(
+        val coordinates: Point,
+        val direction: Direction
+    )
+
 }
