@@ -22,6 +22,7 @@ class InMemoryRepositoryTests {
         )
 
         val repository: IFieldsRepository = InMemoryFieldsRepository()
+        repository.delete()
 
         // When
         assertThrows<NoSuchElementException>("Restore before save: exception should be thrown")

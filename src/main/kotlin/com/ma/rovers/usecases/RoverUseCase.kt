@@ -48,7 +48,7 @@ class RoverUseCase(val repository: IFieldsRepository): IRoverUseCase {
             val field = repository.restore()
             val rovers = mutableListOf<IRoverUseCase.RoverInfo>()
             for (x in 0..< field.length.size)
-                for (y in 0..< field.length.size){
+                for (y in 0..< field.width.size){
                     val rover = field.cell(Point(x, y)).locatedObject
                     if (rover is IRover)
                         rovers.add(IRoverUseCase.RoverInfo(Point(x,y), rover.cameraDirection))
