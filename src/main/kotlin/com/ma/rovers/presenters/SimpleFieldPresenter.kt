@@ -13,4 +13,7 @@ class SimpleFieldPresenter: IFieldPresenter {
             fieldObjectsDesc.toList())
     }
 
+    override fun formatErrorViewModel(errorMessage: String): FieldViewModel {
+        return FieldViewModel(0, 0, "", listOf(), errorMessage)
+    }
 }

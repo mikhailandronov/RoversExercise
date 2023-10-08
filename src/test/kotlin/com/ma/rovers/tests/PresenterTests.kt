@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 class PresenterTests {
     @Test
-    fun `Format with SimpleFieldPresenter`(){
+    fun `Format result with SimpleFieldPresenter`(){
         // Given
         val length = 10
         val width = 20
@@ -33,5 +33,24 @@ class PresenterTests {
         assertEquals(1, viewModel.fieldObjects.size, "Incorrect number of field objects")
         assertEquals("На ячейке [${position.x}, ${position.y}] находится марсоход; направление камеры - $direction)",
             viewModel.fieldObjects[0], "Incorrect description of field objects")
+    }
+
+    @Test
+    fun `Format error with SimpleFieldPresenter`(){
+        // Given
+        val presenter: IFieldPresenter = SimpleFieldPresenter()
+        val errorMessage = "Incorrect behaviour"
+
+        // When
+        val viewModel = presenter.formatErrorViewModel(errorMessage)
+
+        // Then
+        assertEquals(errorMessage, viewModel.errorMessage, "Incorrect error message")
+        assertEquals(0, viewModel.fieldLength, "Incorrect length")
+        assertEquals(0, viewModel.fieldWidth, "Incorrect width")
+        assertEquals("", viewModel.fieldSizeDescription,
+            "Incorrect field size description")
+        assertEquals(0, viewModel.fieldObjects.size, "Incorrect number of field objects")
+
     }
 }
