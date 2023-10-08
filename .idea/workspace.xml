@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="281a536a-0953-49b6-8089-3eb305bed1a3" name="Changes" comment="Updated CleanArchitecture.puml">
+    <list default="true" id="281a536a-0953-49b6-8089-3eb305bed1a3" name="Changes" comment="Refactored ConsoleUI">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/presenters/TabularFieldPresenter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/diagrams/CleanArchitecture.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/diagrams/CleanArchitecture.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/diagrams/CleanArchitecture.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/diagrams/CleanArchitecture.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/usecases/IRoverManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/usecases/IRoverUseCase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/usecases/RoverManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/usecases/RoverUseCase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/ma/rovers/tests/UseCasesTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/ma/rovers/tests/UseCasesTests.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/config/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/ma/rovers/config/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +49,11 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="RoversExercise" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -63,8 +65,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="UML Class" />
-        <option value="Kotlin Interface" />
         <option value="Kotlin File" />
+        <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -116,8 +118,8 @@
       <recent name="C:\Users\mikha\IdeaProjects\RoversExercise\src\main\kotlin\com\ma\rovers\domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'com.ma.rovers.tests'">
-    <configuration name="DomainTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Kotlin.MainKt">
+    <configuration name="ControllerTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -130,7 +132,53 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.ma.rovers.tests.DomainTests&quot;" />
+            <option value="&quot;com.ma.rovers.tests.ControllerTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ControllerTests.onRunRoverProgramRequested" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.ma.rovers.tests.ControllerTests.onRunRoverProgramRequested&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="InMemoryRepositoryTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.ma.rovers.tests.InMemoryRepositoryTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -163,82 +211,20 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="UseCasesTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.ma.rovers.tests.UseCasesTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="UseCasesTests.putRoverToField" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.ma.rovers.tests.UseCasesTests.putRoverToField&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="UseCasesTests.runRoverProgram" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.ma.rovers.tests.UseCasesTests.runRoverProgram&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ma.rovers.config.MainKt" />
+      <module name="RoversExercise.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Gradle.Tests in 'com.ma.rovers.tests'" />
-        <item itemvalue="Gradle.UseCasesTests" />
-        <item itemvalue="Gradle.UseCasesTests.runRoverProgram" />
-        <item itemvalue="Gradle.UseCasesTests.putRoverToField" />
-        <item itemvalue="Gradle.DomainTests" />
+        <item itemvalue="Gradle.InMemoryRepositoryTests" />
+        <item itemvalue="Gradle.ControllerTests.onRunRoverProgramRequested" />
+        <item itemvalue="Gradle.ControllerTests" />
       </list>
     </recent_temporary>
   </component>
@@ -342,7 +328,77 @@
       <option name="project" value="LOCAL" />
       <updated>1696700153066</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Updated CleanArchitecture.puml">
+      <created>1696744362299</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1696744362299</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Implemented RoverUseCase.getFieldState(), refactored UseCasesTests">
+      <created>1696744553411</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1696744553411</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Updated architecture description">
+      <created>1696764585734</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1696764585734</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Implemented SimpleFieldPresenter and tests for it">
+      <created>1696764681389</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1696764681389</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Added error formatting in IFieldPresenter">
+      <created>1696767457797</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1696767457797</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Added error formatting in IFieldPresenter">
+      <created>1696767973562</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1696767973562</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Implemented FieldController and tests for it">
+      <created>1696771654175</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1696771654175</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Fixed minor bugs in RoverUseCase and RepositoryTests">
+      <created>1696771704521</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1696771704521</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Implemented ConsoleUI">
+      <created>1696775499066</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1696775499066</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Refactored ConsoleUI">
+      <created>1696778156346</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1696778156346</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,7 +427,30 @@
     <MESSAGE value="Implemented movement blocking when next cell is busy" />
     <MESSAGE value="Implemented RoverManager (use-cases) and tests for it" />
     <MESSAGE value="Updated CleanArchitecture.puml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated CleanArchitecture.puml" />
+    <MESSAGE value="Implemented RoverUseCase.getFieldState(), refactored UseCasesTests" />
+    <MESSAGE value="Updated architecture description" />
+    <MESSAGE value="Implemented SimpleFieldPresenter and tests for it" />
+    <MESSAGE value="Added error formatting in IFieldPresenter" />
+    <MESSAGE value="Implemented FieldController and tests for it" />
+    <MESSAGE value="Fixed minor bugs in RoverUseCase and RepositoryTests" />
+    <MESSAGE value="Implemented ConsoleUI" />
+    <MESSAGE value="Refactored ConsoleUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored ConsoleUI" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.io.IOException" package="java.io" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="GradleRunConfiguration">
+        <watch expression="result" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
