@@ -10,40 +10,48 @@ class ConsoleUI (val controller: FieldController): IUIRunner {
         var command = getMenuSelection()
         while (command != MenuOptions.Exit){
             val result: FieldViewModel? = when (command){
-                MenuOptions.DefineField -> {
-                    val fieldDimensions = requestFieldSize()
-                    if (fieldDimensions != null)
-                        controller.onNewFieldRequested(fieldDimensions[0], fieldDimensions[1])
-                    else null
-                }
-                MenuOptions.PlaceRover -> {
-                    val roverParams = requestRoverParams()
-                    if (roverParams != null)
-                        controller.onNewRoverPlacementRequested(
-                            Point(
-                                roverParams[0].toInt(),
-                                roverParams[1].toInt()
-                            ),
-                            Direction.valueOf(roverParams[2]))
-                    else null
-                }
-                MenuOptions.RunProgram -> {
-                    val roverProgramParams = requestRoverProgramParams()
-                    if (roverProgramParams != null)
-                        controller.onRunRoverProgramRequested(
-                            Point(
-                                roverProgramParams[0].toInt(),
-                                roverProgramParams[1].toInt()
-                            ),
-                            roverProgramParams[2])
-                    else null
-                }
+                MenuOptions.DefineField -> defineFieldView()
+                MenuOptions.PlaceRover -> placeRoverView()
+                MenuOptions.RunProgram -> runProgramView()
                 else -> null
             }
 
             displayField(result)
             command = getMenuSelection()
         }
+    }
+
+    private fun runProgramView(): FieldViewModel? {
+        val roverProgramParams = requestRoverProgramParams()
+        return if (roverProgramParams != null)
+            controller.onRunRoverProgramRequested(
+                Point(
+                    roverProgramParams[0].toInt(),
+                    roverProgramParams[1].toInt()
+                ),
+                roverProgramParams[2]
+            )
+        else null
+    }
+
+    private fun placeRoverView(): FieldViewModel? {
+        val roverParams = requestRoverParams()
+        return if (roverParams != null)
+            controller.onNewRoverPlacementRequested(
+                Point(
+                    roverParams[0].toInt(),
+                    roverParams[1].toInt()
+                ),
+                Direction.valueOf(roverParams[2])
+            )
+        else null
+    }
+
+    private fun defineFieldView(): FieldViewModel? {
+        val fieldDimensions = requestFieldSize()
+        return if (fieldDimensions != null)
+            controller.onNewFieldRequested(fieldDimensions[0], fieldDimensions[1])
+        else null
     }
 
     private fun requestRoverParams(): Array<String>? {
