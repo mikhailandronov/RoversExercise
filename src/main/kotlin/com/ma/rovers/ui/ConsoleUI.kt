@@ -57,7 +57,7 @@ class ConsoleUI (private val controller: FieldController): IUIRunner {
     private fun requestRoverParams(): Array<String>? {
         var input = ""
         while (!input.trim().matches(Regex("([0-9]+\\s+[0-9]+\\s+[NSEW])|-"))) {
-            println("Введите через пробел координаты и направление камеры марсохода [N, S, E, W], либо '-' для возврата в меню:")
+            println("Введите через пробел координаты и направление камеры марсохода (N, S, E, W), либо '-' для возврата в меню:")
             input = readln()
         }
         if (input.trim() == "-") return null
@@ -77,7 +77,7 @@ class ConsoleUI (private val controller: FieldController): IUIRunner {
     private fun requestRoverProgramParams(): Array<String>? {
         var input = ""
         while (!input.trim().matches(Regex("([0-9]+\\s+[0-9]+\\s+[MRL]+)|-"))) {
-            println("Введите через пробел координаты марсохода и программу, либо '-' для возврата в меню:")
+            println("Введите через пробел координаты марсохода и программу (M, R, L), либо '-' для возврата в меню:")
             input = readln()
         }
         if (input.trim() == "-")
@@ -91,13 +91,13 @@ class ConsoleUI (private val controller: FieldController): IUIRunner {
     private fun requestFieldSize(): Array<Int>? {
         var input = ""
         while (!input.trim().matches(Regex("([0-9]+\\s+[0-9]+)|-"))) {
-            println("Введите через пробел длину и ширину участка плато, либо '-' для возврата в меню:")
+            println("Введите через пробел координаты верхнего правого угла плато, либо '-' для возврата в меню:")
             input = readln()
         }
         if (input.trim() == "-") return null
         else {
             val values = input.split(regex = Regex("\\s")).toTypedArray()
-            return arrayOf(values[0].toInt(), values[1].toInt())
+            return arrayOf(values[0].toInt()+1, values[1].toInt()+1)
         }
     }
 
