@@ -4,6 +4,7 @@ import com.ma.rovers.domain.Direction
 import com.ma.rovers.domain.Point
 import com.ma.rovers.presenters.IFieldPresenter
 import com.ma.rovers.presenters.SimpleFieldPresenter
+import com.ma.rovers.presenters.TabularFieldPresenter
 import com.ma.rovers.usecases.IRoverUseCase
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
@@ -31,7 +32,7 @@ class PresenterTests {
         assertEquals("Перед нами поле размером $length x $width ячеек", viewModel.fieldSizeDescription,
             "Incorrect field size description")
         assertEquals(1, viewModel.fieldObjects.size, "Incorrect number of field objects")
-        assertEquals("На ячейке [${position.x}, ${position.y}] находится марсоход; направление камеры - $direction)",
+        assertEquals("На ячейке [${position.x}, ${position.y}] находится марсоход; направление камеры - $direction",
             viewModel.fieldObjects[0], "Incorrect description of field objects")
     }
 
@@ -52,5 +53,32 @@ class PresenterTests {
             "Incorrect field size description")
         assertEquals(0, viewModel.fieldObjects.size, "Incorrect number of field objects")
 
+    }
+
+    @Test
+    fun `Format result with TabularFieldPresenter`(){
+        // Given
+        val length = 5
+        val width = 1
+        val position = Point(2, 0)
+        val direction = Direction.EAST
+        val presenter: IFieldPresenter = TabularFieldPresenter()
+        val fieldState = IRoverUseCase.GetFieldStateResult(
+            length,
+            width,
+            arrayOf(IRoverUseCase.RoverInfo(position, direction))
+        )
+
+        // When
+        val viewModel = presenter.formatFieldViewModel(fieldState)
+
+        // Then
+        assertEquals(length, viewModel.fieldLength, "Incorrect length")
+        assertEquals(width, viewModel.fieldWidth, "Incorrect width")
+        assertEquals("Перед нами поле размером $length x $width ячеек", viewModel.fieldSizeDescription,
+            "Incorrect field size description")
+        assertEquals(1, viewModel.fieldObjects.size, "Incorrect number of field objects")
+        assertEquals("[ ][ ][→][ ][ ]",
+            viewModel.fieldObjects[0], "Incorrect description of field objects")
     }
 }
