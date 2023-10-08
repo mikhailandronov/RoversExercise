@@ -5,7 +5,7 @@ import com.ma.rovers.domain.Direction
 import com.ma.rovers.domain.Point
 import com.ma.rovers.presenters.FieldViewModel
 
-class ConsoleUI (val controller: FieldController): IUIRunner {
+class ConsoleUI (private val controller: FieldController): IUIRunner {
     override fun run() {
         var command = getMenuSelection()
         while (command != MenuOptions.Exit){

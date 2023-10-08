@@ -7,7 +7,7 @@ import com.ma.rovers.presenters.FieldViewModel
 import com.ma.rovers.presenters.IFieldPresenter
 import com.ma.rovers.usecases.IRoverUseCase
 
-class FieldController (val interactor: IRoverUseCase, val presenter: IFieldPresenter) {
+class FieldController (private val interactor: IRoverUseCase, private val presenter: IFieldPresenter) {
     fun onNewFieldRequested(length: Int, width: Int): FieldViewModel{
         val useCaseResult = interactor.defineField(IntSize(length), IntSize(width))
         if (!useCaseResult.successful) return presenter.formatErrorViewModel(useCaseResult.errorMessage)

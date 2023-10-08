@@ -4,7 +4,7 @@ import com.ma.rovers.domain.*
 import com.ma.rovers.repositories.IFieldsRepository
 import java.lang.Exception
 
-class RoverUseCase(val repository: IFieldsRepository): IRoverUseCase {
+class RoverUseCase(private val repository: IFieldsRepository): IRoverUseCase {
     override fun defineField(length: IntSize, width: IntSize): IRoverUseCase.DefineFieldResult {
         try {
             val field = Field(length, width)
