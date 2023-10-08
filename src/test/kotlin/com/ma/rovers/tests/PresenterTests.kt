@@ -45,7 +45,7 @@ class PresenterTests {
         val viewModel = presenter.formatErrorViewModel(errorMessage)
 
         // Then
-        assertEquals(errorMessage, viewModel.errorMessage, "Incorrect error message")
+        assertEquals("Произошла ошибка: $errorMessage", viewModel.errorMessage, "Incorrect error message")
         assertEquals(0, viewModel.fieldLength, "Incorrect length")
         assertEquals(0, viewModel.fieldWidth, "Incorrect width")
         assertEquals("", viewModel.fieldSizeDescription,

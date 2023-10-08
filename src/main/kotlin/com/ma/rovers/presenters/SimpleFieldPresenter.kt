@@ -14,6 +14,7 @@ class SimpleFieldPresenter: IFieldPresenter {
     }
 
     override fun formatErrorViewModel(errorMessage: String): FieldViewModel {
-        return FieldViewModel(0, 0, "", listOf(), errorMessage)
+        return FieldViewModel(0, 0, "", listOf(),
+            "Произошла ошибка: $errorMessage")
     }
 }
