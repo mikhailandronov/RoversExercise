@@ -46,6 +46,7 @@ UseCase .l.> IRepository
 Controller .u.> IPresenter
 
 class UI{
+    run()
     onButtonClick()
 }
 note right of UI: Реализует \nработу с UI

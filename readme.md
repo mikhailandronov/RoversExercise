@@ -44,7 +44,7 @@
 * repositories - ex. IDataService
 * controllers - ex. DataObject.Operation
 * presenters - ex. ListView, FormView 
-* views - ex. ListView, FormView
+* ui - ex. ListView, FormView
 * config - ex. Application
 
 ![CleanArchitecture.png](src\diagrams\CleanArchitecture.png)
