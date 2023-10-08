@@ -19,7 +19,7 @@ IRepository <|-l- Repository
 note bottom of Repository: Реализует \nработу с БД
 
 interface IPresenter{
-    formatViewModel()
+    formatViewModel(): ViewModel
 }
 
 class Presenter{
