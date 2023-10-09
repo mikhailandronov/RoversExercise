@@ -37,7 +37,7 @@ IUseCase <|-d- UseCase
 
 UseCase ..> IDomainEntity
 
-class Controller{
+class Controller <<BFF>>{
     onBusinessEvent(): ViewModel
 }
 
