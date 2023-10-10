@@ -35,7 +35,7 @@
 
 # Структура приложения
 
-## Сервис: Rovers
+## Общая архитектура
 
 ### Пакеты, интерфейсы, классы
 
@@ -48,3 +48,7 @@
 * config - ex. Application
 
 ![CleanArchitecture.png](src\diagrams\CleanArchitecture.png)
+
+## Сервис: Field & Rovers
+### Event storming
+![EventStorming.png](src\diagrams\EventStorming.png)
