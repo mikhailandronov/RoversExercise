@@ -47,8 +47,11 @@
 * ui - ex. ListView, FormView
 * config - ex. Application
 
-![CleanArchitecture.png](src\diagrams\CleanArchitecture.png)
+![CleanArchitecture.png](./src/diagrams/CleanArchitecture.png)
 
 ## Сервис: Field & Rovers
 ### Event storming
-![EventStorming.png](src\diagrams\EventStorming.png)
+![EventStorming.png](./src/diagrams/EventStorming.png)
+
+### Domain model
+![DomainModel.png](./src/diagrams/DomainModel.png)
