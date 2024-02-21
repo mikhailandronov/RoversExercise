@@ -1,0 +1,41 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface IField{
+    width: IntSize
+    length: IntSize
+
+    cell (coordinates: Point): ICell
+    placeObject(obj: IFieldObject, coordinates: Point)
+    removeObject(coordinates: Point)
+}
+
+interface ICell{
+    coordinates: Point
+}
+
+interface IFieldObject{
+    location: ICell?
+}
+
+ICell -r-> "0..1" IFieldObject : locatedObject
+' IFieldObject --> "0..1" ICell : location
+IField "ownerField" *-- "0..*" ICell : "cells[]"
+IFieldObject <|-- IRover
+
+interface IRover{
+    cameraDirection: Direction
+    turnRight()
+    turnLeft()
+    moveForward()
+    executeProgram(program: String)
+}
+
+enum Direction {
+    NORTH
+    EAST
+    SOUTH
+    WEST
+}
+
+@enduml
